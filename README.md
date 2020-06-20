@@ -1,2 +1,2 @@
 # Machine Learning Projects
-The repository is an assimilation of all my machine learning projects
+The repository is a collection of all my machine learning projects
