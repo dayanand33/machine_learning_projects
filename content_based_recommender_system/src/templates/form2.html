@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Recommendation Engine</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+
+    /* Remove the jumbotron's default bottom margin */
+     .jumbotron {
+      margin-bottom: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Recommendations</h1>
+    <p>Singularity and beyond!</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+  </div>
+</nav>
+
+<div class="container">
+
+  <form id="modelSelectionForm" action="/recommender" method="POST" enctype="multipart/form-data">
+  <h4>Product</h4>
+    <select class="btn btn-primary dropdown-toggle"  data-toggle="dropdown"  name = "doc_id">
+      <option value="0">featherlite ladies long sleeve stain resistant tapered twill shirt 2xl onyx black stone</option>
+      <option value="7">fifth degree womens gold foil graphic tees junior top short sleeve printed shirt  l</option>
+      <option value="14">ladies white seamless ribbed diamond patterned cap sleeve top wide vneck</option>
+      <option value="24">featherlite ladies pique sport shirt forest green  xxlarge</option>
+    </select>
+
+
+    <br><br>
+      <h4>NLP Model</h4>
+    <select class="btn btn-primary dropdown-toggle"  data-toggle="dropdown" id="mySelect" name = "model_name">
+      <option value="bag_of_words">Bag of Words</option>
+      <option value="tf_idf">TfIdf Model</option>
+      <option value="idf">IDF Model</option>
+      <option value="avg_w2v_model">Average Word2Vec Model</option>
+      <option value="weighted_w2v_model">Weighted Average Word2Vec Model</option>
+      <option value="idf_w2v_brand">Word2Vec + Idf with brand</option>
+      <option value="jujnobee">kutumbaa</option>
+
+    </select>
+      <br><br>
+     <input type="submit"  class="btn btn-success" value="Submit">
+  </form>
+
+</div>
+
+</body>
+
+</html>
